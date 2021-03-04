@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container" style="margin-top: 3%;">
+        <div class="row">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- <form>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <input type="text" class="form-control" placeholder="First Number">
+                                </div>
+                                <div class="col-md-2">
+                                    <center> <input type="text" class="form-control"
+                                            style="text-align: center; border-radius: 50%;"></center>
+                                </div>
+                                <div class="col-md-5">
+                                    <input type="text" class="form-control" placeholder="Last Number">
+                                </div>
+                            </div>
+                        </form> -->
+                        <div style="margin-top: 2%;">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <button onclick="c('')" class="btn btn-warning" style="width: 100%;" type="submit"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4z" />
+                                        </svg></button>
+                                </div>
+                                <div class="col-md-8">
+                                    <center> <input type="text" style="text-align: center;" class="form-control" id="d"></center>
+                                </div>
+                                <div class="col-md-2">
+                                    <button onclick="c('')"  class="btn btn-danger" style="width: 100%;" type="submit"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-arrow-counterclockwise"
+                                            viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z" />
+                                            <path
+                                                d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z" />
+                                        </svg></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" style="margin-top: 3%;">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="row" style="margin-top: 3%;">
+                                            <div class="col">
+                                                <!-- <button class="btn btn-secondary" style="width: 100%;">
+                                                    1
+                                                </button> -->
+                                                <input style="width: 100%;" type="button" class="btn btn-secondary"  value="1" onclick='v("1")'>
+                                            </div>
+                                            <div class="col">
+                                                <input style="width: 100%;" type="button" class="btn btn-secondary"  value="2" onclick='v("2")'>
+                                           
+                                            </div>
+                                            <div class="col">
+                                                <input style="width: 100%;" type="button" class="btn btn-secondary"  value="3" onclick='v("3")'>
+                                           
+                                            </div>
+                                        </div>
+                                        <div class="row" style="margin-top: 8%;">
+                                            <div class="col">
+                                                <input style="width: 100%;" type="button" class="btn btn-secondary"  value="4" onclick='v("4")'>
+                                           
+                                            </div>
+                                            <div class="col">
+                                                <input style="width: 100%;" type="button" class="btn btn-secondary"  value="5" onclick='v("5")'>
+                                            </div>
+                                            <div class="col">
+                                                <input style="width: 100%;" type="button" class="btn btn-secondary"  value="6" onclick='v("6")'>
+                                            </div>
+                                        </div>
+                                        <div class="row" style="margin-top: 8%;">
+                                            <div class="col">
+                                                <input style="width: 100%;" type="button" class="btn btn-secondary"  value="7" onclick='v("7")'>
+                                            </div>
+                                            <div class="col">
+                                                <input style="width: 100%;" type="button" class="btn btn-secondary"  value="8" onclick='v("8")'>
+                                            </div>
+                                            <div class="col">
+                                                <input style="width: 100%;" type="button" class="btn btn-secondary"  value="9" onclick='v("9")'>
+                                            </div>
+                                        </div>
+                                        <div class="row" style="margin-top: 8%;">
+                                            <div class="col">
+                                                <input style="width: 100%;" type="button" class="btn btn-secondary"  value="." onclick='v(".")'>
+                                            </div>
+                                            <div class="col">
+                                                <input style="width: 100%;" type="button" class="btn btn-secondary"  value="0" onclick='v("0")'>
+                                            </div>
+                                            <div class="col">
+                                                <input style="width: 100%;" type="button" class="btn btn-secondary"  value="%" onclick='v("%")'>
+                                            </div>
+                                        </div>
+                                        <div class="row" style="margin-top: 8%;">
+                                            <div class="col">
+                                                <input style="width: 100%;" type="button" class="btn btn-secondary"  value="1/x" onclick='v("1/")'>
+                                             </div>
+                                            <div class="col">
+                                                <input style="width: 100%;" type="button" class="btn btn-secondary"  value="x^2" onclick='v("**2")'>
+                                            </div>
+                                            <div class="col">
+                                                <input style="width: 100%;" type="button" class="btn btn-secondary"  value="x^3" onclick='v("**3")'>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+
+                                        <div class="col" style="margin-top: 8%;">
+                                            <input style="width: 100%;" type="button" class="btn btn-secondary"  value="+" onclick='v("+")'>
+                                        </div>
+                                        <div class="col" style="margin-top: 18%;">
+                                            <input style="width: 100%;" type="button" class="btn btn-secondary"  value="-" onclick='v("-")'>
+                                             </div>
+                                        <div class="col" style="margin-top: 18%;">
+                                            <input style="width: 100%;" type="button" class="btn btn-secondary"  value="*" onclick='v("*")'>
+                                              </div>
+                                        <div class="col" style="margin-top: 18%;">
+                                            <input style="width: 100%;" type="button" class="btn btn-secondary"  value="/" onclick='v("/")'>
+                                        </div>
+                                        <div class="col" style="margin-top: 18%;">
+                                            <input type="button"  class="btn btn-secondary" style="width: 100%;" value="=" onclick='e()'>         
+                                         </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    function c(val)
+{
+document.getElementById("d").value=val;
+}
+function v(val)
+{
+document.getElementById("d").value+=val;
+}
+function e() 
+{ 
+try 
+{ 
+  c(eval(document.getElementById("d").value)) 
+} 
+catch(e) 
+{
+  c('Error') 
+} 
+}
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</html>
